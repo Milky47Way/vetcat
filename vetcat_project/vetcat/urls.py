@@ -15,10 +15,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from vetcat.views import home, breeds, breed
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('vetcat/', include("vetcat.urls", namespace="vetcat")),
+    path('home/', home, name="vatcat-home"),
+    path('breeds/', breeds, name="models-breeds"),
+    path('breed/<int:pk>', breed, name="models-breed"),
 ]
+
+app_name = "vatcat"
+
+#python manage.py runserver
+#cd vetcat_project
+
+#http://127.0.0.1:8000/vetcat/home/
 
