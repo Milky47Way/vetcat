@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}VetCat clinic{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/vetcat/home/">Головна сторінка</a> |
+            <a href="/vetcat/breeds/">Породи ваших котиків</a>
+
+        </nav>
+    </header>
+    <hr>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <hr>
+    <footer>
+        <p>© 2025</p>
+    </footer>
+</body>
+</html>

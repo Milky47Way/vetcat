@@ -9,8 +9,8 @@ class Breed(models.Model):
 
     class Meta:
         ordering = ['breed_name']
-        verbose_lst_name = 'Breed'
-        verbose_lst_name_plural = 'Breeds'
+        verbose_name = 'Breed'
+        verbose_name_plural = 'Breeds'
 
     def __str__(self):
         return f"{self.breed_name} {self.coat_color}"
@@ -24,8 +24,8 @@ class Owner(models.Model):
 
     class Meta:
         ordering = ['last_name']
-        verbose_lst_name = 'Owner'
-        verbose_lst_name_plural = 'Owners'
+        verbose_name = 'Owner'
+        verbose_name_plural = 'Owners'
 
 
     def __str__(self):
@@ -42,8 +42,8 @@ class Cat(models.Model):
 
     class Meta:
         ordering = ['name']
-        verbose_lst_name = 'Cat'
-        verbose_lst_name_plural = 'Cats'
+        verbose_name = 'Cat'
+        verbose_name_plural = 'Cats'
 
     def __str__(self):
         return f"{self.name} {self.age} {self.date_of_birth} {self.breed_name} {self.owner}"
