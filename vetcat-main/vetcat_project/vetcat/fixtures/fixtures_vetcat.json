@@ -1,0 +1,81 @@
+[
+  {
+    "model": "vetcat.breed",
+    "pk": 1,
+    "fields": {
+      "breed_name": "Шотландська висловуха",
+      "coat_color": "Сірий таббі"
+    }
+  },
+  {
+    "model": "vetcat.breed",
+    "pk": 2,
+    "fields": {
+      "breed_name": "Мейн-кун",
+      "coat_color": "Червоний мармуровий"
+    }
+  },
+  {
+    "model": "vetcat.breed",
+    "pk": 3,
+    "fields": {
+      "breed_name": "Сфінкс",
+      "coat_color": "Кремовий"
+    }
+  },
+
+  {
+    "model": "vetcat.owner",
+    "pk": 1,
+    "fields": {
+      "first_name": "Олена",
+      "last_name": "Коваленко",
+      "phone_number": "380501234567",
+      "date_of_birth": "1990-05-15"
+    }
+  },
+  {
+    "model": "vetcat.owner",
+    "pk": 2,
+    "fields": {
+      "first_name": "Ігор",
+      "last_name": "Петренко",
+      "phone_number": "380979876543",
+      "date_of_birth": "1985-11-20"
+    }
+  },
+
+  {
+    "model": "vetcat.cat",
+    "pk": 1,
+    "fields": {
+      "name": "Мурчик",
+      "age": 4,
+      "date_of_birth": "2021-03-01",
+      "breed_name": 1,
+      "owner": 1
+    }
+  },
+  {
+    "model": "vetcat.cat",
+    "pk": 2,
+    "fields": {
+      "name": "Васька",
+      "age": 2,
+      "date_of_birth": "2023-08-10",
+      "breed_name": 2,
+      "owner": 1
+    }
+  },
+  {
+    "model": "vetcat.cat",
+    "pk": 3,
+    "fields": {
+      "name": "Клео",
+      "age": 6,
+      "date_of_birth": "2019-01-25",
+      "breed_name": 3,
+      "owner": 2
+    }
+  }
+]

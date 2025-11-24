@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Породи котів{% endblock %}
+
+{% block content %}
+<h2>Всі породи</h2>
+<ul>
+    {% for breed in breeds %}
+        <li>
+            <a href="{% url 'vatcat:models-breed' breed.id %}">
+                {{ breed.breed_name }}  ({{ breed.coat_color }} кольору)
+            </a>
+        </li>
+    {% empty %}
+        <li>Вибачте, ще не було таких порід!</li>
+    {% endfor %}
+</ul>
+{% endblock %}

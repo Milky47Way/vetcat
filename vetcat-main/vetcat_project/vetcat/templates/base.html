@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}VetCat clinic{% endblock %}</title>
+</head>
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/site.css' %}" rel="stylesheet">
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="btn btn-info" href="/vetcat/home/">Головна сторінка</a> |
+                <a class="btn btn-info" href="/vetcat/breeds/">Породи ваших котиків</a>
+            </div>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <hr>
+    <footer>
+        <p>© 2025</p>
+    </footer>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
