@@ -16,12 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from vetcat.views import home, breeds, breed
+from .views import home, breeds, breed, login_view, logout_view, register_view
 
 urlpatterns = [
     path('home/', home, name="vatcat-home"),
     path('breeds/', breeds, name="models-breeds"),
     path('breed/<int:pk>', breed, name="models-breed"),
+    path('login/', login_view, name="login"),
+    path('logout/', logout_view, name="logout"),
+    path('register/', register_view, name="register"),
 ]
 
 app_name = "vatcat"
